@@ -1,4 +1,4 @@
-//Typescript é uma linguagem de propgramação e um superset do javascript
+//Typescript é uma linguagem de programação e um superset do javascript
 
 //Instalar o typescript globalmente na máquina npm i -g typescript
 //instala o typescript como dependencia de desenvolvimento npm i -D typescript

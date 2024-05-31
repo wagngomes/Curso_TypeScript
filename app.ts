@@ -21,3 +21,38 @@ let x: boolean = true
 
 let m: string | number = 'não recomendável'
 let z: any = 'qualquer tipo'
+
+//para declarar os tipos para um objeto usamos as interfaces 
+
+interface Pessoa {
+    nome: string,
+    idade: number,
+    //se quisermos colocar um parâmetro que não é obrigatório , usamos o ponto '?' da seguinte forma:
+    profissao?: string
+}
+
+const pessoa: Pessoa = {
+    nome: 'wagner',
+    idade: 42
+}
+
+const outraPessoa: Pessoa = {
+    nome: 'Dri',
+    idade: 38,
+    profissao: 'pedagoga'
+}
+
+//Declaração no uso de arrays 
+
+const arrayPessoas: Pessoa[] = [ pessoa, outraPessoa]
+
+const arrayPessoas2: Array<Pessoa> = [ pessoa, outraPessoa]
+
+const number: number[] = [
+    1, 2, 3
+]
+
+const strings: Array<string>= [
+    'wagner', 'dri', 'davi'
+]
+
