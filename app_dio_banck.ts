@@ -1,27 +1,37 @@
 // dio banck
 // name, accountnumber
 
+import { Account } from "./class/DioAccount"
+import { PeopleAccount } from "./class/PeopleAccount"
+import { CompanyAccount } from "./class/CompanyAccount"
+
 //depositar, sacar 
 
-class Account {
-    name: string
-    accountNumber: number
 
-    constructor(name: string, accountNumber: number){
-        this.name = name
-        this.accountNumber = accountNumber
-    }
+//const newAccount: Account = new Account('WAGNER', 333)
 
-    deposit = () => {
-        console.log('vc depositou')
-    }
 
-    withDraw = () => {
-        console.log('vc sacou')
+
+// a classe admin é uma classe filha que herda de account
+
+class Admin extends Account{
+
+    constructor (name: string, accountNumber: number){
+        super(name, accountNumber)
+
     }
 }
 
-const newAccount: Account = new Account('WAGNER', 333)
+//classes abstratas servem de modelos para outras classes e não podem ser utilizadas para instanciar objetos
 
-console.log(newAccount.name)
-console.log(newAccount.accountNumber)
+
+
+
+
+const peopleAccount: PeopleAccount = new PeopleAccount(1, 'WAGNER GOMES', 3333)
+console.log(peopleAccount)
+peopleAccount.deposit()
+
+const companyAccount: CompanyAccount = new CompanyAccount('dio', 20)
+console.log(companyAccount)
+companyAccount.deposit()
